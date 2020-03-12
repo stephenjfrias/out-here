@@ -1,0 +1,97 @@
+<script>
+    const femaleNames = [
+        "Emily",
+        "Hannah",
+        "Madison",
+        "Ashley",
+        "Sarah",
+        "Alexis",
+        "Samantha",
+        "Jessica",
+        "Elizabeth",
+        "Taylor",
+        "Lauren",
+        "Alyssa"
+    ];
+    const maleNames = [
+        "Jacob",
+        "Michael",
+        "Matthew",
+        "Joshua",
+        "Christopher",
+        "Nicholas",
+        "Andrew",
+        "Joseph",
+        "Daniel",
+        "Tyler",
+        "William",
+        "Brandon"
+    ];
+    const nonbinaryNames = [
+        "Smith",
+        "Johnson",
+        "Williams",
+        "Brown",
+        "Jones",
+        "Miller",
+        "Davis",
+        "Garcia",
+        "Rodriguez",
+        "Wilson",
+        "Martinez",
+        "Anderson"
+    ];
+    const lastNames = [
+        "Lee",
+        "Gonzalez",
+        "Harris",
+        "Clark",
+        "Lewis",
+        "Robinson",
+        "Walker",
+        "Perez",
+        "Hall",
+        "Young",
+        "Allen",
+        "Sanchez"
+    ];
+    const randomFemaleName =
+        femaleNames[Math.floor(Math.random() * femaleNames.length)];
+    const randomMaleName =
+        maleNames[Math.floor(Math.random() * maleNames.length)];
+    const randomNonbinaryName =
+        nonbinaryNames[Math.floor(Math.random() * nonbinaryNames.length)];
+    const randomLastName =
+        lastNames[Math.floor(Math.random() * lastNames.length)];
+
+    function femaleNameFunction() {
+        document.getElementById("femaleName").innerHTML = randomFemaleName + ' ' + randomLastName;
+    }
+    function maleNameFunction() {
+        document.getElementById("maleName").innerHTML = randomMaleName + ' ' + randomLastName;
+    }
+    function nonbinaryNameFunction() {
+        document.getElementById("nonbinaryName").innerHTML = randomNonbinaryName + ' ' + randomLastName;
+    }
+</script>
+
+<style>
+    #femaleName {
+        color: red;
+    }
+
+    #maleName {
+        color: blue;
+    }
+
+    #nonbinaryName {
+        color: green;
+    }
+</style>
+
+<button onclick="femaleNameFunction()">Female Name</button>
+<p id="femaleName"></p>
+<button onclick="maleNameFunction()">Male Name</button>
+<p id="maleName"></p>
+<button onclick="nonbinaryNameFunction()">Non Binary Name</button>
+<p id="nonbinaryName"></p>
