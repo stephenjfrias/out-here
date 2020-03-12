@@ -1,5 +1,5 @@
 <script>
-    const femaleNames = [
+    let femaleNames = [
         "Emily",
         "Hannah",
         "Madison",
@@ -13,7 +13,7 @@
         "Lauren",
         "Alyssa"
     ];
-    const maleNames = [
+    let maleNames = [
         "Jacob",
         "Michael",
         "Matthew",
@@ -27,7 +27,7 @@
         "William",
         "Brandon"
     ];
-    const nonbinaryNames = [
+    let nonbinaryNames = [
         "Smith",
         "Johnson",
         "Williams",
@@ -41,7 +41,7 @@
         "Martinez",
         "Anderson"
     ];
-    const lastNames = [
+    let lastNames = [
         "Lee",
         "Gonzalez",
         "Harris",
@@ -55,43 +55,64 @@
         "Allen",
         "Sanchez"
     ];
-    const randomFemaleName =
+    let randomFemaleName =
         femaleNames[Math.floor(Math.random() * femaleNames.length)];
-    const randomMaleName =
+    let randomMaleName =
         maleNames[Math.floor(Math.random() * maleNames.length)];
-    const randomNonbinaryName =
+    let randomNonbinaryName =
         nonbinaryNames[Math.floor(Math.random() * nonbinaryNames.length)];
-    const randomLastName =
+    let randomLastName =
         lastNames[Math.floor(Math.random() * lastNames.length)];
 
+    document.getElementById("femaleName").addEventListener("click", femaleNameFunction);
+
     function femaleNameFunction() {
-        document.getElementById("femaleName").innerHTML = randomFemaleName + ' ' + randomLastName;
+        document.getElementById("output").innerHTML = randomFemaleName + ' ' + randomLastName;
     }
+
+    document.getElementById("maleName").addEventListener("click", maleNameFunction);
+
     function maleNameFunction() {
-        document.getElementById("maleName").innerHTML = randomMaleName + ' ' + randomLastName;
+        document.getElementById("output").innerHTML = randomMaleName + ' ' + randomLastName;
     }
+
+    document.getElementById("nonbinaryName").addEventListener("click", nonbinaryNameFunction);
+
     function nonbinaryNameFunction() {
-        document.getElementById("nonbinaryName").innerHTML = randomNonbinaryName + ' ' + randomLastName;
+        document.getElementById("output").innerHTML = randomNonbinaryName + ' ' + randomLastName;
     }
 </script>
 
 <style>
+    #container {
+        text-align: center;
+    }
+
     #femaleName {
-        color: red;
+        width: 250px;
+        height: 25px;
     }
 
     #maleName {
-        color: blue;
+        width: 250px;
+        height: 25px;
     }
 
     #nonbinaryName {
-        color: green;
+        width: 250px;
+        height: 25px;
+    }
+
+    #output {
+        color: red;
     }
 </style>
 
-<button onclick="femaleNameFunction()">Female Name</button>
-<p id="femaleName"></p>
-<button onclick="maleNameFunction()">Male Name</button>
-<p id="maleName"></p>
-<button onclick="nonbinaryNameFunction()">Non Binary Name</button>
-<p id="nonbinaryName"></p>
+<div id="container">
+    <button id="femaleName" style="display: inline-block;">Female Name</button>
+    <button id="maleName" style="display: inline-block;">Male Name</button>
+    <button id="nonbinaryName" style="display: inline-block;">Non Binary Name</button>
+</div>
+<div style="text-align: center;">
+    <p id="output"></p>
+</div>
