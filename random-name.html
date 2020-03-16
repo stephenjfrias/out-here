@@ -3,33 +3,22 @@
         text-align: center;
     }
 
-    #femaleName {
+    .buttonCSS {
         width: 250px;
         height: 25px;
-    }
-
-    #maleName {
-        width: 250px;
-        height: 25px;
-    }
-
-    #nonbinaryName {
-        width: 250px;
-        height: 25px;
-    }
-
-    #output {
-        color: red;
     }
 </style>
 
 <div id="container">
-    <button id="femaleName" style="display: inline-block;">Female Name</button>
-    <button id="maleName" style="display: inline-block;">Male Name</button>
-    <button id="nonbinaryName" style="display: inline-block;">Non Binary Name</button>
+    <button class="buttonCSS" id="femaleName" style="display: inline-block;">Female Name</button>
+    <button class="buttonCSS" id="maleName" style="display: inline-block;">Male Name</button>
+    <button class="buttonCSS" id="nonbinaryName" style="display: inline-block;">Non Binary Name</button>
 </div>
 <div style="text-align: center;">
     <p id="output"></p>
+</div>
+<div id="container">
+    <button class="buttonCSS" style="display: inline-block;" onclick="history.go(0);">Refresh</button>
 </div>
 
 <script>
